@@ -6,7 +6,7 @@
 # from django.template.loader import render_to_string
 # from django.utils.encoding import force_bytes
 # from django.utils.http import urlsafe_base64_encode
-# from our_project.settings import EMAIL_HOST_USER
+# from root.settings import EMAIL_HOST_USER
 
 
 # class ForgotPasswordForm(forms.Form):

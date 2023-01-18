@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="hhtps://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100&display=swap" rel>
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link rel="icon" type="image/x-icon" href="media/icon.png">
 </head>
 <body style="background-color:lightgrey">
     <header>
@@ -19,7 +20,7 @@
             User -> {{ user.username }} |
             <a href="{% url 'logout' %}"> Log out</a> |
             <a href="{% url 'post_new' %}">Add produuct</a>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
-            <a href="{% url 'calculator' %}"><mark>Using calculator</mark></a>
+            <a href="{% url 'others' %}"><mark>See other things</mark></a>
         </p>
 
     {% else %}

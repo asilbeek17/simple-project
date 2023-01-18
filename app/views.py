@@ -1,3 +1,4 @@
+from django.contrib.auth.models import User
 from django.shortcuts import render
 from django.views.generic import ListView, DetailView, FormView
 # from app.form import ForgotPasswordForm
@@ -34,8 +35,21 @@ class BlogDeleteView(DeleteView):
     template_name = 'post_delete.html'
     success_url = reverse_lazy('home')
 
+def others(reqest):
+    return render(reqest, 'others.html')
+
 def CalculatorView(request):
     return render(request, 'calculator/calculator_1.html')
+
+# def registered(request):
+#     return render(request, 'registered.html')
+
+class RegisterePeople(ListView):
+    model = User
+    template_name = 'registered.html'
+
+
+
 
 # class ForgotPasswordView(FormView):
 #     template_name = 'forgot_password.html'
