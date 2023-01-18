@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ASILBEK'S BLOG.17</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="hhtps://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100&display=swap" rel>
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+</head>
+<body style="background-color:lightgrey">
+    <header>
+        <h1 style="text-indent: 30px;">
+            <a href="{% url 'home' %}">Asilbek's Blog</a>
+        </h1>
+        {% if user.is_authenticated %}
+        <p style="text-indent: 650px;">
+            User -> {{ user.username }} |
+            <a href="{% url 'logout' %}"> Log out</a> |
+            <a href="{% url 'post_new' %}">Add produuct</a>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+            <a href="{% url 'calculator' %}"><mark>Using calculator</mark></a>
+        </p>
+
+    {% else %}
+        <p style="text-indent: 1200px">
+        <a href="{% url 'signup' %}">Register</a> |
+            <a href="{% url 'login' %}">Log In</a>
+        </p>
+    {% endif %}
+    </header>
+
+    <div>
+        {% block content %}
+        {% endblock content %}
+    </div>
+</body>
+</html>
