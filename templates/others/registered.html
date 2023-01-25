@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ASILBEK'S BLOG.17</title>
+    <link rel="icon" type="image/x-icon" href="media/icon.png">
+</head>
+
+<body>
+<style>
+{% block content %}
+
+
+table, th, td {
+  border:1px solid black;
+}
+</style>
+<body>
+
+<h2 style="text-indent: 540px">Table of registered people!</h2>
+
+<table style="width:100%">
+  <tr>
+    <th>Id</th>
+    <th>Username</th>
+    <th>First_name</th>
+    <th>Last_name</th>
+    <th>Last_login</th>
+    <th>Is_superuser</th>
+  </tr>
+  {% for auth_user in object_list %}
+  <tr>
+    <td>{{ auth_user.id }}</td>
+    <td>{{ auth_user.username }}</td>
+    <td>{{ auth_user.first_name }}</td>
+    <td>{{ auth_user.last_name }}</td>
+    <td>{{ auth_user.last_login }}</td>
+    <td>{{ auth_user.is_superuser }}</td>
+  </tr>
+
+    {% endfor %}
+{% endblock content %}
+
+</table>
+</body>
+</html>
+
