@@ -1,0 +1,14 @@
+    body {
+      background-color: #000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .clock {
+      color: #17D4FE;
+      font-size: 60px;
+      font-family: Orbitron;
+      letter-spacing: 7px;
+    }
